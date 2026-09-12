@@ -9,11 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         :root {
             --primary: #6366f1;
@@ -29,9 +25,7 @@
             --glass-border: rgba(255, 255, 255, 0.1);
         }
 
-        html {
-            scroll-behavior: smooth;
-        }
+        html { scroll-behavior: smooth; }
 
         body {
             font-family: 'Cairo', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -43,14 +37,10 @@
             position: relative;
         }
 
-        /* ✨ خلفية متحركة */
         body::before {
             content: '';
             position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
+            top: 0; left: 0; right: 0; bottom: 0;
             background:
                 radial-gradient(circle at 20% 20%, rgba(99, 102, 241, 0.15) 0%, transparent 50%),
                 radial-gradient(circle at 80% 80%, rgba(168, 85, 247, 0.15) 0%, transparent 50%),
@@ -64,14 +54,10 @@
             50% { transform: scale(1.1) translate(-20px, 20px); }
         }
 
-        /* ✨ شبكة خلفية */
         body::after {
             content: '';
             position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
+            top: 0; left: 0; right: 0; bottom: 0;
             background-image:
                 linear-gradient(rgba(99, 102, 241, 0.03) 1px, transparent 1px),
                 linear-gradient(90deg, rgba(99, 102, 241, 0.03) 1px, transparent 1px);
@@ -80,7 +66,6 @@
             pointer-events: none;
         }
 
-        /* 🎯 حاوية رئيسية */
         .container {
             max-width: 900px;
             margin: 0 auto;
@@ -89,7 +74,6 @@
             z-index: 1;
         }
 
-        /* 🌟 الهيدر الفخم */
         .hero {
             padding: 60px 30px 50px;
             text-align: center;
@@ -107,10 +91,8 @@
         .hero::before {
             content: '';
             position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
+            top: -50%; left: -50%;
+            width: 200%; height: 200%;
             background: conic-gradient(from 0deg, transparent, rgba(99, 102, 241, 0.15), transparent 30%);
             animation: rotate 15s linear infinite;
             z-index: -1;
@@ -121,14 +103,11 @@
             to { transform: rotate(360deg); }
         }
 
-        /* 🛡️ أيقونة الدرع */
         .shield-icon {
-            width: 90px;
-            height: 90px;
+            width: 90px; height: 90px;
             margin: 0 auto 25px;
             display: flex;
-            align-items: center;
-            justify-content: center;
+            align-items: center; justify-content: center;
             border-radius: 50%;
             background: linear-gradient(135deg, #6366f1, #a855f7, #38bdf8);
             box-shadow:
@@ -157,13 +136,11 @@
         }
 
         .shield-icon svg {
-            width: 45px;
-            height: 45px;
+            width: 45px; height: 45px;
             color: white;
             filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.3));
         }
 
-        /* 🏷️ العنوان الرئيسي */
         .app-name {
             font-size: 14px;
             font-weight: 600;
@@ -192,7 +169,6 @@
             margin: 0 auto;
         }
 
-        /* 📅 التاريخ */
         .last-updated {
             display: inline-flex;
             align-items: center;
@@ -208,12 +184,10 @@
         }
 
         .last-updated svg {
-            width: 14px;
-            height: 14px;
+            width: 14px; height: 14px;
             color: var(--secondary);
         }
 
-        /* 🌐 زر تبديل اللغة */
         .lang-toggle {
             display: flex;
             justify-content: center;
@@ -245,9 +219,7 @@
             overflow: hidden;
         }
 
-        .lang-toggle button:hover {
-            color: var(--text-primary);
-        }
+        .lang-toggle button:hover { color: var(--text-primary); }
 
         .lang-toggle button.active {
             background: linear-gradient(135deg, #6366f1, #a855f7);
@@ -256,7 +228,6 @@
             transform: scale(1.02);
         }
 
-        /* 📋 كرت المحتوى */
         .content-card {
             background: var(--glass);
             border: 1px solid var(--glass-border);
@@ -270,19 +241,11 @@
             animation: fadeInUp 0.8s ease-out 0.2s both;
         }
 
-        /* 🎬 أنيميشن */
         @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
-        /* 📑 قسم داخل الكرت */
         .section {
             margin-bottom: 35px;
             opacity: 0;
@@ -298,12 +261,13 @@
         .section:nth-child(6) { animation-delay: 0.8s; }
         .section:nth-child(7) { animation-delay: 0.9s; }
         .section:nth-child(8) { animation-delay: 1.0s; }
+        .section:nth-child(9) { animation-delay: 1.1s; }
+        .section:nth-child(10) { animation-delay: 1.2s; }
+        .section:nth-child(11) { animation-delay: 1.3s; }
+        .section:nth-child(12) { animation-delay: 1.4s; }
 
-        .section:last-child {
-            margin-bottom: 0;
-        }
+        .section:last-child { margin-bottom: 0; }
 
-        /* 🎯 رأس القسم */
         .section-header {
             display: flex;
             align-items: center;
@@ -313,11 +277,9 @@
 
         .section-number {
             flex-shrink: 0;
-            width: 40px;
-            height: 40px;
+            width: 40px; height: 40px;
             display: flex;
-            align-items: center;
-            justify-content: center;
+            align-items: center; justify-content: center;
             border-radius: 12px;
             background: linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(168, 85, 247, 0.1));
             border: 1px solid rgba(99, 102, 241, 0.3);
@@ -340,7 +302,6 @@
             line-height: 1.9;
         }
 
-        /* 📝 قائمة */
         .section ul {
             list-style: none;
             padding: 0;
@@ -361,17 +322,13 @@
             padding-right: 32px;
         }
 
-        .section ul li:last-child {
-            border-bottom: none;
-        }
+        .section ul li:last-child { border-bottom: none; }
 
         .section ul li::before {
             content: '';
             position: absolute;
-            left: 8px;
-            top: 20px;
-            width: 8px;
-            height: 8px;
+            left: 8px; top: 20px;
+            width: 8px; height: 8px;
             border-radius: 50%;
             background: linear-gradient(135deg, var(--primary), var(--accent));
             box-shadow: 0 0 12px rgba(99, 102, 241, 0.6);
@@ -382,13 +339,58 @@
             right: 8px;
         }
 
-        /* 💪 الكلمات المميزة */
-        .section strong {
-            color: var(--secondary);
-            font-weight: 700;
+        .section strong { color: var(--secondary); font-weight: 700; }
+
+        .highlight-box {
+            display: flex;
+            gap: 12px;
+            padding: 16px 20px;
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(5, 150, 105, 0.05));
+            border: 1px solid rgba(16, 185, 129, 0.25);
+            border-radius: 16px;
+            margin: 16px 0;
+            align-items: flex-start;
         }
 
-        /* 📧 رابط البريد */
+        .highlight-box svg {
+            width: 22px; height: 22px;
+            color: #34d399;
+            flex-shrink: 0;
+            margin-top: 3px;
+        }
+
+        .highlight-box p {
+            color: #6ee7b7;
+            font-size: 14px;
+            margin: 0;
+            line-height: 1.7;
+        }
+
+        .warning-box {
+            display: flex;
+            gap: 12px;
+            padding: 16px 20px;
+            background: linear-gradient(135deg, rgba(245, 158, 11, 0.1), rgba(217, 119, 6, 0.05));
+            border: 1px solid rgba(245, 158, 11, 0.25);
+            border-radius: 16px;
+            margin: 16px 0;
+            align-items: flex-start;
+        }
+
+        .warning-box svg {
+            width: 22px; height: 22px;
+            color: #fbbf24;
+            flex-shrink: 0;
+            margin-top: 3px;
+        }
+
+        .warning-box p {
+            color: #fcd34d;
+            font-size: 14px;
+            margin: 0;
+            line-height: 1.7;
+        }
+
         .email-link {
             display: inline-flex;
             align-items: center;
@@ -412,18 +414,10 @@
             box-shadow: 0 10px 25px rgba(99, 102, 241, 0.3);
         }
 
-        .email-link svg {
-            width: 18px;
-            height: 18px;
-            color: var(--secondary);
-        }
+        .email-link svg { width: 18px; height: 18px; color: var(--secondary); }
 
-        /* 🚫 إخفاء */
-        .hidden {
-            display: none !important;
-        }
+        .hidden { display: none !important; }
 
-        /* 🎯 الفوتر */
         footer {
             text-align: center;
             padding: 40px 20px;
@@ -442,58 +436,9 @@
             display: block;
         }
 
-        /* 📱 للجوال */
-        @media (max-width: 640px) {
-            .container {
-                padding: 12px;
-            }
-
-            .hero {
-                padding: 45px 20px 35px;
-                border-radius: 24px;
-            }
-
-            .shield-icon {
-                width: 75px;
-                height: 75px;
-            }
-
-            .shield-icon svg {
-                width: 38px;
-                height: 38px;
-            }
-
-            .content-card {
-                padding: 28px 22px;
-                border-radius: 20px;
-            }
-
-            .section h2 {
-                font-size: 17px;
-            }
-
-            .section p, .section ul li {
-                font-size: 14px;
-            }
-
-            .section-number {
-                width: 34px;
-                height: 34px;
-                font-size: 14px;
-            }
-
-            .lang-toggle button {
-                padding: 9px 18px;
-                font-size: 13px;
-            }
-        }
-
-        /* 🌈 شريط علوي */
         .top-bar {
             position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
+            top: 0; left: 0; right: 0;
             height: 3px;
             background: linear-gradient(90deg, #6366f1, #a855f7, #38bdf8, #6366f1);
             background-size: 300% 100%;
@@ -506,28 +451,29 @@
             100% { background-position: 300% 50%; }
         }
 
-        /* 🎯 تخطيط عربي */
-        [dir="rtl"] body {
-            font-family: 'Cairo', sans-serif;
-        }
+        [dir="rtl"] body { font-family: 'Cairo', sans-serif; }
 
-        /* 📖 Scrollbar مخصص */
-        ::-webkit-scrollbar {
-            width: 10px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: var(--bg-darker);
-        }
-
+        ::-webkit-scrollbar { width: 10px; }
+        ::-webkit-scrollbar-track { background: var(--bg-darker); }
         ::-webkit-scrollbar-thumb {
             background: linear-gradient(135deg, #6366f1, #a855f7);
             border-radius: 10px;
             border: 2px solid var(--bg-darker);
         }
-
         ::-webkit-scrollbar-thumb:hover {
             background: linear-gradient(135deg, #4f46e5, #9333ea);
+        }
+
+        @media (max-width: 640px) {
+            .container { padding: 12px; }
+            .hero { padding: 45px 20px 35px; border-radius: 24px; }
+            .shield-icon { width: 75px; height: 75px; }
+            .shield-icon svg { width: 38px; height: 38px; }
+            .content-card { padding: 28px 22px; border-radius: 20px; }
+            .section h2 { font-size: 17px; }
+            .section p, .section ul li { font-size: 14px; }
+            .section-number { width: 34px; height: 34px; font-size: 14px; }
+            .lang-toggle button { padding: 9px 18px; font-size: 13px; }
         }
     </style>
 </head>
@@ -537,7 +483,6 @@
 
     <div class="container">
 
-        <!-- 🌟 Hero Section -->
         <div class="hero">
             <div class="shield-icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
@@ -556,11 +501,10 @@
                     <circle cx="12" cy="12" r="10"/>
                     <polyline points="12 6 12 12 16 14"/>
                 </svg>
-                <span id="last-updated-text">آخر تحديث: 11 سبتمبر 2026</span>
+                <span id="last-updated-text">آخر تحديث: 12 سبتمبر 2026</span>
             </div>
         </div>
 
-        <!-- 🌐 Language Toggle -->
         <div class="lang-toggle">
             <button id="btn-ar" class="active" onclick="showLang('ar')">🇰🇼 العربية</button>
             <button id="btn-en" onclick="showLang('en')">🇬🇧 English</button>
@@ -573,75 +517,153 @@
                 <div class="section">
                     <div class="section-header">
                         <div class="section-number">1</div>
-                        <h2>المعلومات التي نجمعها</h2>
+                        <h2>مقدمة</h2>
                     </div>
-                    <p>لتشغيل وظائف التطبيق الأساسية، قد نصل إلى الأنواع التالية من المعلومات:</p>
-                    <ul>
-                        <li><strong>معرّف الجهاز:</strong> نستخدمه بشكل مجهول لأغراض الأمان ومنع إساءة استخدام الخدمة. لا يمكن ربطه بهويتك الشخصية.</li>
-                        <li><strong>أرقام الهواتف:</strong> عندما تبحث عن رقم، يتم إرساله إلى خادمنا لعرض النتائج. لا نقوم بتخزين سجل بحثك أو ربطه بك.</li>
-                        <li><strong>بيانات الاستخدام:</strong> قد نجمع بيانات مجهولة حول كيفية تفاعلك مع التطبيق لتحسين الأداء.</li>
-                    </ul>
+                    <p>مرحباً بك في <strong>"كاشفهم: دليل أرقام الكويت"</strong>. نحن ملتزمون بحماية خصوصيتك وبياناتك الشخصية. توضح هذه السياسة كيفية جمعنا للمعلومات واستخدامها وحمايتها عند استخدامك لتطبيقنا.</p>
+                    <p>باستخدامك للتطبيق، فإنك توافق على الممارسات الموضحة في هذه السياسة.</p>
                 </div>
 
                 <div class="section">
                     <div class="section-header">
                         <div class="section-number">2</div>
-                        <h2>مصدر بيانات دليل الأرقام</h2>
+                        <h2>المعلومات التي نجمعها</h2>
                     </div>
-                    <p>يعتمد تطبيقنا على بيانات تم جمعها من <strong>مصادر عامة</strong>. نحن نحترم حقوق الأفراد ونوفر آلية واضحة لطلب حذف أي بيانات.</p>
+                    <p>لتشغيل وظائف التطبيق الأساسية، نجمع الأنواع التالية من المعلومات:</p>
+                    <ul>
+                        <li><strong>معرّف الجهاز المجهول:</strong> نستخدم معرّفاً مجهولاً للجهاز لأغراض الأمان ومنع إساءة استخدام الخدمة. لا يمكن ربطه بهويتك الشخصية.</li>
+                        <li><strong>أرقام البحث:</strong> عندما تبحث عن رقم، يُرسل الرقم إلى خادمنا لعرض النتائج. لا نحتفظ بسجل بحثك الشخصي.</li>
+                        <li><strong>معرّف الإعلانات:</strong> يستخدمه مزود الإعلانات (Google AdMob) لعرض إعلانات ملائمة.</li>
+                        <li><strong>بيانات الاستخدام المجهولة:</strong> معلومات إحصائية عامة حول أداء التطبيق.</li>
+                    </ul>
+                    <div class="highlight-box">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                            <polyline points="22 4 12 14.01 9 11.01"/>
+                        </svg>
+                        <p><strong>لا نجمع:</strong> اسمك، بريدك، رقم هاتفك، موقعك الجغرافي، جهات اتصالك، الصور، أو أي بيانات شخصية تعريفية.</p>
+                    </div>
                 </div>
 
                 <div class="section">
                     <div class="section-header">
                         <div class="section-number">3</div>
-                        <h2>كيف نستخدم معلوماتك</h2>
+                        <h2>مصدر بيانات دليل الأرقام</h2>
                     </div>
-                    <p>نستخدم المعلومات التي نجمعها <strong>فقط</strong> للأغراض التالية:</p>
+                    <p>يعتمد تطبيق "كاشفهم" في تقديم خدماته على مصادر البيانات التالية:</p>
                     <ul>
-                        <li>توفير وظيفة كشف هوية المتصل ودليل الأرقام.</li>
-                        <li>تحسين أداء التطبيق وإصلاح الأخطاء.</li>
-                        <li>ضمان أمان الخدمة ومنع الاحتيال.</li>
+                        <li><strong>المصادر العامة:</strong> أرقام الشركات والجهات التجارية المنشورة في الأدلة العامة والمواقع الإلكترونية الرسمية.</li>
+                        <li><strong>مساهمات المستخدمين:</strong> أرقام يشاركها المستخدمون طوعاً وبموافقتهم الصريحة لتحديث الدليل.</li>
+                        <li><strong>الخدمات الحكومية:</strong> أرقام الخدمات والجهات الرسمية المعلنة علناً.</li>
                     </ul>
+                    <p>نحترم حقوق الأفراد ونوفر آلية واضحة لحذف أي بيانات عند الطلب.</p>
                 </div>
 
                 <div class="section">
                     <div class="section-header">
                         <div class="section-number">4</div>
-                        <h2>مشاركة المعلومات</h2>
+                        <h2>كيف نستخدم معلوماتك</h2>
                     </div>
-                    <p>نحن <strong>لا نشارك</strong> بياناتك الشخصية مع أي طرف ثالث لأغراض تسويقية. قد نشارك بيانات مجهولة مع مزودي خدمة الإعلانات (مثل Google AdMob) لعرض إعلانات ملائمة.</p>
+                    <p>نستخدم المعلومات للأغراض التالية فقط:</p>
+                    <ul>
+                        <li>توفير خدمة كشف هوية المتصل.</li>
+                        <li>تشغيل البحث في دليل الأرقام.</li>
+                        <li>تحسين أداء التطبيق وإصلاح الأخطاء.</li>
+                        <li>ضمان أمان الخدمة ومنع الاحتيال.</li>
+                        <li>عرض إعلانات مناسبة لتغطية تكاليف التشغيل.</li>
+                    </ul>
                 </div>
 
                 <div class="section">
                     <div class="section-header">
                         <div class="section-number">5</div>
-                        <h2>حقوقك</h2>
+                        <h2>خدمة كشف المكالمات</h2>
                     </div>
-                    <p>لك الحق في طلب حذف أي بيانات شخصية قد تكون مرتبطة بك. يمكنك القيام بذلك بسهولة من خلال خيار <strong>"طلب حذف رقمي"</strong> في صفحة الإعدادات في التطبيق.</p>
+                    <p>يستخدم تطبيقنا واجهة برمجة أندرويد الرسمية <strong>CallScreeningService</strong> لعرض اسم المتصل أثناء رنين الهاتف. هذه الخدمة:</p>
+                    <ul>
+                        <li>تعمل فقط أثناء استقبال مكالمة.</li>
+                        <li>لا تسجّل أو تحفظ المكالمات.</li>
+                        <li>لا تصل إلى محتوى المكالمات.</li>
+                        <li>لا تحتاج صلاحيات حساسة مثل MANAGE_OWN_CALLS.</li>
+                    </ul>
                 </div>
 
                 <div class="section">
                     <div class="section-header">
                         <div class="section-number">6</div>
-                        <h2>حماية البيانات</h2>
+                        <h2>مشاركة المعلومات</h2>
                     </div>
-                    <p>نتخذ إجراءات أمنية تقنية وإدارية مناسبة لحماية معلوماتك من الوصول غير المصرح به أو التعديل أو الإفشاء.</p>
+                    <p>نحن <strong>لا نبيع</strong> بياناتك الشخصية لأي طرف ثالث. نشارك بيانات مجهولة فقط مع:</p>
+                    <ul>
+                        <li><strong>Google AdMob:</strong> لعرض الإعلانات.</li>
+                        <li><strong>خوادم الاستضافة:</strong> لتشغيل الخدمة بأمان.</li>
+                    </ul>
                 </div>
 
                 <div class="section">
                     <div class="section-header">
                         <div class="section-number">7</div>
-                        <h2>التغييرات على هذه السياسة</h2>
+                        <h2>حقوقك</h2>
                     </div>
-                    <p>قد نقوم بتحديث هذه السياسة من وقت لآخر. سنقوم بإخطارك بأي تغييرات جوهرية عن طريق نشر السياسة الجديدة في التطبيق.</p>
+                    <p>لك الحقوق التالية:</p>
+                    <ul>
+                        <li>طلب حذف رقمك من قاعدة البيانات عبر زر "طلب حذف رقمي" في الإعدادات.</li>
+                        <li>إلغاء تثبيت التطبيق في أي وقت.</li>
+                        <li>الاتصال بنا لأي استفسار حول بياناتك.</li>
+                    </ul>
+                    <div class="warning-box">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+                            <line x1="12" y1="9" x2="12" y2="13"/>
+                            <line x1="12" y1="17" x2="12.01" y2="17"/>
+                        </svg>
+                        <p>يتم الاستجابة لطلبات الحذف خلال 48 ساعة كحد أقصى.</p>
+                    </div>
                 </div>
 
                 <div class="section">
                     <div class="section-header">
                         <div class="section-number">8</div>
+                        <h2>حماية البيانات</h2>
+                    </div>
+                    <p>نتخذ إجراءات أمنية متقدمة لحماية بياناتك، تتضمن:</p>
+                    <ul>
+                        <li>تشفير الاتصالات عبر HTTPS/TLS.</li>
+                        <li>توقيع الطلبات بـ HMAC-SHA256.</li>
+                        <li>حماية ضد هجمات MITM.</li>
+                        <li>مراقبة السلوك المشبوه.</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <div class="section-header">
+                        <div class="section-number">9</div>
+                        <h2>الامتثال القانوني</h2>
+                    </div>
+                    <p>يلتزم التطبيق بالقوانين واللوائح المعمول بها في <strong>دولة الكويت</strong>، بما في ذلك أحكام هيئة تنظيم الاتصالات (CITRA). نحن نحترم خصوصية الأفراد ونوفر آليات واضحة لحماية الحقوق.</p>
+                </div>
+
+                <div class="section">
+                    <div class="section-header">
+                        <div class="section-number">10</div>
+                        <h2>الأطفال</h2>
+                    </div>
+                    <p>التطبيق غير موجّه للأطفال تحت 13 عاماً، ولا نجمع بيانات منهم عن قصد.</p>
+                </div>
+
+                <div class="section">
+                    <div class="section-header">
+                        <div class="section-number">11</div>
+                        <h2>التغييرات على هذه السياسة</h2>
+                    </div>
+                    <p>قد نقوم بتحديث هذه السياسة من وقت لآخر. سنُعلمك بأي تغييرات جوهرية عبر التطبيق أو هذا الرابط.</p>
+                </div>
+
+                <div class="section">
+                    <div class="section-header">
+                        <div class="section-number">12</div>
                         <h2>اتصل بنا</h2>
                     </div>
-                    <p>إذا كان لديك أي أسئلة حول هذه السياسة، يمكنك التواصل معنا على:</p>
+                    <p>لأي استفسار أو طلب:</p>
                     <a href="mailto:kashefhom.dev@gmail.com" class="email-link">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
@@ -661,75 +683,153 @@
                 <div class="section">
                     <div class="section-header">
                         <div class="section-number">1</div>
-                        <h2>Information We Collect</h2>
+                        <h2>Introduction</h2>
                     </div>
-                    <p>To operate the app's core functions, we may access the following types of information:</p>
-                    <ul>
-                        <li><strong>Device ID:</strong> Used anonymously for security and to prevent service abuse. It cannot be linked to your personal identity.</li>
-                        <li><strong>Phone Numbers:</strong> When you search for a number, it is sent to our server to display results. We do not store your search history or link it to you.</li>
-                        <li><strong>Usage Data:</strong> We may collect anonymous data about how you interact with the app to improve performance.</li>
-                    </ul>
+                    <p>Welcome to <strong>"Kashefhom: Kuwait Number Book"</strong>. We are committed to protecting your privacy and personal data. This policy explains how we collect, use, and protect information when you use our app.</p>
+                    <p>By using the app, you agree to the practices described in this policy.</p>
                 </div>
 
                 <div class="section">
                     <div class="section-header">
                         <div class="section-number">2</div>
-                        <h2>Source of Directory Data</h2>
+                        <h2>Information We Collect</h2>
                     </div>
-                    <p>Our app relies on data collected from <strong>public sources</strong>. We respect individuals' rights and provide a clear mechanism to request data deletion.</p>
+                    <p>To operate the app's core functions, we collect the following:</p>
+                    <ul>
+                        <li><strong>Anonymous Device ID:</strong> Used for security and abuse prevention. Cannot be linked to your identity.</li>
+                        <li><strong>Search Queries:</strong> Phone numbers you search are sent to our server. We do not keep personal search history.</li>
+                        <li><strong>Advertising ID:</strong> Used by Google AdMob to display relevant ads.</li>
+                        <li><strong>Anonymous Usage Data:</strong> General statistical information about app performance.</li>
+                    </ul>
+                    <div class="highlight-box">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                            <polyline points="22 4 12 14.01 9 11.01"/>
+                        </svg>
+                        <p><strong>We do NOT collect:</strong> Your name, email, phone number, location, contacts, photos, or any personal identifying data.</p>
+                    </div>
                 </div>
 
                 <div class="section">
                     <div class="section-header">
                         <div class="section-number">3</div>
-                        <h2>How We Use Your Information</h2>
+                        <h2>Source of Directory Data</h2>
                     </div>
-                    <p>We use the information we collect <strong>only</strong> for the following purposes:</p>
+                    <p>Our directory relies on the following sources:</p>
                     <ul>
-                        <li>To provide the caller ID and number directory function.</li>
-                        <li>To improve app performance and fix bugs.</li>
-                        <li>To ensure service security and prevent fraud.</li>
+                        <li><strong>Public Sources:</strong> Business and commercial numbers published in public directories and official websites.</li>
+                        <li><strong>User Contributions:</strong> Numbers shared voluntarily by users with explicit consent.</li>
+                        <li><strong>Government Services:</strong> Publicly announced official service numbers.</li>
                     </ul>
+                    <p>We respect individual rights and provide a clear mechanism to delete any data upon request.</p>
                 </div>
 
                 <div class="section">
                     <div class="section-header">
                         <div class="section-number">4</div>
-                        <h2>Information Sharing</h2>
+                        <h2>How We Use Your Information</h2>
                     </div>
-                    <p>We <strong>do not share</strong> your personal data with any third party for marketing purposes. We may share anonymous data with ad service providers (such as Google AdMob) to display relevant advertisements.</p>
+                    <p>We use information only for:</p>
+                    <ul>
+                        <li>Providing caller ID service.</li>
+                        <li>Operating the number directory search.</li>
+                        <li>Improving app performance and fixing bugs.</li>
+                        <li>Ensuring service security and preventing fraud.</li>
+                        <li>Displaying relevant ads to cover operating costs.</li>
+                    </ul>
                 </div>
 
                 <div class="section">
                     <div class="section-header">
                         <div class="section-number">5</div>
-                        <h2>Your Rights</h2>
+                        <h2>Call Screening Service</h2>
                     </div>
-                    <p>You have the right to request the deletion of any personal data that may be associated with you. You can do this easily via the <strong>"Request My Number Deletion"</strong> option in the app's Settings page.</p>
+                    <p>Our app uses Android's official <strong>CallScreeningService</strong> API to display caller names during ringing. This service:</p>
+                    <ul>
+                        <li>Only works during incoming calls.</li>
+                        <li>Does not record or save calls.</li>
+                        <li>Does not access call content.</li>
+                        <li>Does not require sensitive permissions like MANAGE_OWN_CALLS.</li>
+                    </ul>
                 </div>
 
                 <div class="section">
                     <div class="section-header">
                         <div class="section-number">6</div>
-                        <h2>Data Protection</h2>
+                        <h2>Information Sharing</h2>
                     </div>
-                    <p>We take appropriate technical and organizational security measures to protect your information from unauthorized access, alteration, or disclosure.</p>
+                    <p>We <strong>do not sell</strong> your personal data to any third party. We share anonymous data only with:</p>
+                    <ul>
+                        <li><strong>Google AdMob:</strong> To display ads.</li>
+                        <li><strong>Hosting Servers:</strong> To run the service securely.</li>
+                    </ul>
                 </div>
 
                 <div class="section">
                     <div class="section-header">
                         <div class="section-number">7</div>
-                        <h2>Changes to This Policy</h2>
+                        <h2>Your Rights</h2>
                     </div>
-                    <p>We may update this policy from time to time. We will notify you of any material changes by posting the new policy within the app.</p>
+                    <p>You have the right to:</p>
+                    <ul>
+                        <li>Request deletion of your number via "Request Number Deletion" button in Settings.</li>
+                        <li>Uninstall the app at any time.</li>
+                        <li>Contact us for any inquiry about your data.</li>
+                    </ul>
+                    <div class="warning-box">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+                            <line x1="12" y1="9" x2="12" y2="13"/>
+                            <line x1="12" y1="17" x2="12.01" y2="17"/>
+                        </svg>
+                        <p>Deletion requests are processed within 48 hours max.</p>
+                    </div>
                 </div>
 
                 <div class="section">
                     <div class="section-header">
                         <div class="section-number">8</div>
+                        <h2>Data Protection</h2>
+                    </div>
+                    <p>We use advanced security measures:</p>
+                    <ul>
+                        <li>HTTPS/TLS encryption.</li>
+                        <li>HMAC-SHA256 request signing.</li>
+                        <li>MITM attack protection.</li>
+                        <li>Suspicious behavior monitoring.</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <div class="section-header">
+                        <div class="section-number">9</div>
+                        <h2>Legal Compliance</h2>
+                    </div>
+                    <p>The app complies with the laws and regulations of the <strong>State of Kuwait</strong>, including CITRA requirements. We respect individual privacy and provide clear mechanisms for rights protection.</p>
+                </div>
+
+                <div class="section">
+                    <div class="section-header">
+                        <div class="section-number">10</div>
+                        <h2>Children</h2>
+                    </div>
+                    <p>The app is not intended for children under 13, and we do not knowingly collect data from them.</p>
+                </div>
+
+                <div class="section">
+                    <div class="section-header">
+                        <div class="section-number">11</div>
+                        <h2>Policy Changes</h2>
+                    </div>
+                    <p>We may update this policy from time to time. We will notify you of material changes via the app or this link.</p>
+                </div>
+
+                <div class="section">
+                    <div class="section-header">
+                        <div class="section-number">12</div>
                         <h2>Contact Us</h2>
                     </div>
-                    <p>If you have any questions about this policy, you can contact us at:</p>
+                    <p>For any inquiry or request:</p>
                     <a href="mailto:kashefhom.dev@gmail.com" class="email-link">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
@@ -769,7 +869,7 @@
                 html.dir = 'rtl';
                 heroTitle.textContent = 'سياسة الخصوصية';
                 heroSubtitle.textContent = 'نحمي بياناتك بكل شفافية وأمان';
-                lastUpdated.textContent = 'آخر تحديث: 11 سبتمبر 2026';
+                lastUpdated.textContent = 'آخر تحديث: 12 سبتمبر 2026';
             } else {
                 enContent.classList.remove('hidden');
                 arContent.classList.add('hidden');
@@ -779,10 +879,9 @@
                 html.dir = 'ltr';
                 heroTitle.textContent = 'Privacy Policy';
                 heroSubtitle.textContent = 'Protecting your data with full transparency';
-                lastUpdated.textContent = 'Last updated: September 11, 2026';
+                lastUpdated.textContent = 'Last updated: September 12, 2026';
             }
 
-            // ✅ إعادة تشغيل الأنيميشن
             document.querySelectorAll('.section').forEach((el, i) => {
                 el.style.animation = 'none';
                 setTimeout(() => {
@@ -791,7 +890,6 @@
             });
         }
 
-        // 🎬 أنيميشن عند التمرير
         window.addEventListener('scroll', () => {
             const scrolled = window.scrollY;
             const hero = document.querySelector('.hero');
