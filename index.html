@@ -85,7 +85,7 @@ footer .footer-logo{font-weight:700;background:linear-gradient(135deg,#6366f1,#a
 <button id="btn-ar" onclick="showLang('ar')">🇰🇼 العربية</button>
 </div>
 
-<!-- ═════════════════════ ENGLISH ═════════════════════ -->
+<!-- ENGLISH -->
 <div id="content-en">
 <div class="content-card">
 
@@ -180,14 +180,31 @@ footer .footer-logo{font-weight:700;background:linear-gradient(135deg,#6366f1,#a
 </div>
 
 <div class="section">
-<div class="section-header"><div class="section-number">8</div><h2>Call Screening Service</h2></div>
-<p>Our app uses Android's official <strong>CallScreeningService</strong> API to display caller names during ringing. This service:</p>
+<div class="section-header"><div class="section-number">8</div><h2>Call Screening Service &amp; Permissions</h2></div>
+<p>Our app uses Android's official <strong>CallScreeningService</strong> API to display caller names during incoming calls.</p>
+<p>To operate this feature, the app requests the following permission:</p>
 <ul>
-<li>Only works during incoming calls.</li>
-<li>Does not record or save calls.</li>
-<li>Does not access call content.</li>
-<li>Does not require sensitive permissions like MANAGE_OWN_CALLS.</li>
+<li><strong>READ_PHONE_STATE:</strong> Used solely to detect incoming calls in real time and read the caller's phone number so we can match it against our directory and display the caller's name in a floating overlay.</li>
 </ul>
+<p>This permission <strong>does NOT</strong> grant access to:</p>
+<ul>
+<li>Your personal contact list.</li>
+<li>Your call history or logs.</li>
+<li>Your SMS or messages.</li>
+<li>The content of any phone call.</li>
+<li>Your location or any other personal data.</li>
+</ul>
+<p>The CallScreeningService API used by the app:</p>
+<ul>
+<li>Only activates during incoming calls.</li>
+<li>Does not record, save, or store any calls.</li>
+<li>Does not access call content or audio.</li>
+<li>Does not require dangerous permissions like MANAGE_OWN_CALLS or ANSWER_PHONE_CALLS.</li>
+</ul>
+<div class="warning-box">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+<p>You can revoke the READ_PHONE_STATE permission at any time from your device settings. Doing so will disable the automatic caller ID feature, but the app will continue to work as a directory for manual searches.</p>
+</div>
 </div>
 
 <div class="section">
@@ -259,7 +276,7 @@ kashefhom.dev@gmail.com
 </div>
 </div>
 
-<!-- ═════════════════════ ARABIC ═════════════════════ -->
+<!-- ARABIC -->
 <div id="content-ar" class="hidden" dir="rtl">
 <div class="content-card">
 
@@ -354,14 +371,31 @@ kashefhom.dev@gmail.com
 </div>
 
 <div class="section">
-<div class="section-header"><div class="section-number">8</div><h2>خدمة كشف المكالمات</h2></div>
-<p>يستخدم تطبيقنا واجهة برمجة أندرويد الرسمية <strong>CallScreeningService</strong> لعرض اسم المتصل أثناء رنين الهاتف:</p>
+<div class="section-header"><div class="section-number">8</div><h2>خدمة كشف المكالمات والصلاحيات</h2></div>
+<p>يستخدم تطبيقنا واجهة برمجة أندرويد الرسمية <strong>CallScreeningService</strong> لعرض اسم المتصل أثناء استقبال المكالمات.</p>
+<p>لتشغيل هذه الميزة، يطلب التطبيق الصلاحية التالية:</p>
+<ul>
+<li><strong>READ_PHONE_STATE:</strong> تُستخدم فقط للكشف عن المكالمات الواردة في الوقت الفعلي وقراءة رقم المتصل لمطابقته مع دليل الأرقام الخاص بنا وعرض اسم المتصل في نافذة عائمة.</li>
+</ul>
+<p>هذه الصلاحية <strong>لا تمنح</strong> وصولاً إلى:</p>
+<ul>
+<li>قائمة جهات الاتصال الخاصة بك.</li>
+<li>سجل المكالمات الخاص بك.</li>
+<li>الرسائل النصية (SMS).</li>
+<li>محتوى أي مكالمة هاتفية.</li>
+<li>موقعك أو أي بيانات شخصية أخرى.</li>
+</ul>
+<p>واجهة CallScreeningService المستخدمة في التطبيق:</p>
 <ul>
 <li>تعمل فقط أثناء استقبال مكالمة.</li>
-<li>لا تسجّل أو تحفظ المكالمات.</li>
-<li>لا تصل إلى محتوى المكالمات.</li>
-<li>لا تحتاج صلاحيات حساسة مثل MANAGE_OWN_CALLS.</li>
+<li>لا تسجّل أو تحفظ أي مكالمات.</li>
+<li>لا تصل إلى محتوى أو صوت المكالمات.</li>
+<li>لا تحتاج صلاحيات حساسة مثل MANAGE_OWN_CALLS أو ANSWER_PHONE_CALLS.</li>
 </ul>
+<div class="warning-box">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+<p>يمكنك إلغاء صلاحية READ_PHONE_STATE في أي وقت من إعدادات جهازك. سيؤدي ذلك إلى تعطيل ميزة كشف المتصل التلقائي، لكن التطبيق سيواصل العمل كدليل للبحث اليدوي.</p>
+</div>
 </div>
 
 <div class="section">
